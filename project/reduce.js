@@ -11,7 +11,7 @@
 const prices = [ 2.99, 5.99, 7.20, 15, 2000, 0.99 ]
 
 
-const filter = ( filterFunction, array ) => groceries.reduce( (newArray, item) => {
+const filter = ( filterFunction, array ) => array.reduce( (newArray, item) => {
   return filterFunction( item ) ? newArray.concat( item ) : newArray
 }, [] )
 
