@@ -112,3 +112,19 @@ const double = [1, 2, 3, 4].map( x => x *2 )
 
 console.log(double)
 ```
+
+We can re-create this functionality with reduce:
+
+```javascript runnable
+
+const double = item => item * 2
+
+const map = ( mappingFunction, array ) => array.reduce( (acc, item ) => {
+    return acc.concat( mappingFunction( item ) )
+})
+
+const doubleWithReduce = map( double, [2, 4, 6] )
+
+console.log( doubleWithReduce )
+
+```
