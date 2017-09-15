@@ -8,17 +8,5 @@
 
 // GOOD LUCK
 
-const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ]
+const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ] // should return [ 7.2, 2000 ]
 
-/* This is my solution, uncomment to run
-
-const filter = ( filterFunction, array ) => array.reduce( (newArray, item) => {
-  return filterFunction( item ) ? newArray.concat( item ) : newArray
-}, [] )
-
-const higherThan6 = price => price > 6 
-
-const pricesOver6 = filter( higherThan6, prices )
-
-console.log(pricesOver6)
-*/
