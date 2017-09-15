@@ -133,8 +133,10 @@ Can you see how interesting reduce makes things? How we can compose functions wi
 
 @[Can you create a filter function with reduce only?]({"stubs": ["reduce.js"], "command": "node reduce.js"})
 
-Unfold to see my solution!
-:::
+
+
+::: Unfold to see my solution!
+ 
 ```javascript runnable
 const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ]
 
@@ -146,4 +148,5 @@ const higherThan6 = price => price > 6
 const pricesOver6 = filter( higherThan6, prices )
 console.log(pricesOver6)
 ```
+
 :::
