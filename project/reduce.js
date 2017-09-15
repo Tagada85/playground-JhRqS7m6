@@ -8,5 +8,5 @@
 
 // GOOD LUCK
 
-const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ] // should return [ 7.2, 2000 ]
+const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ] // should return [ 7.2, 15, 2000 ]
 
