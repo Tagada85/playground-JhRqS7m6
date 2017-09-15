@@ -121,7 +121,7 @@ const double = item => item * 2
 
 const map = ( mappingFunction, array ) => array.reduce( (acc, item ) => {
     return acc.concat( mappingFunction( item ) )
-})
+}, [])
 
 const doubleWithReduce = map( double, [2, 4, 6] )
 
