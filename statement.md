@@ -29,7 +29,7 @@ The initialValue is an optional value that indicates if the first value should b
 So, for each element in the array, reduce executes the callback provided in its first argument.
 Let’s look at a simple example.
 ```javascript runnable
-[0,2,3,4,5].reduce( (prev, cur) => prev + curr) 
+[0,2,3,4,5].reduce( (prev, curr) => prev + curr) 
 ```
 First call =&gt; returns 0 , accumulator = 0
 
