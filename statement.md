@@ -128,3 +128,7 @@ const doubleWithReduce = map( double, [2, 4, 6] )
 console.log( doubleWithReduce )
 
 ```
+
+Can you see how interesting reduce makes things? How we can compose functions with it? Creating small and reusable pieces to create bigger functions?
+
+@[Luke, how many stars are there in these galaxies?]({"stubs": ["reduce.js"], "command": "node reduce.js"})
