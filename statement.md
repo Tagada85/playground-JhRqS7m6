@@ -46,23 +46,32 @@ Fourth call => returns 4, accumulator = 5 + 4 = 9
 
 Fifth call =>; returns 5, accumulator = 9 + 5 = 14
 
-<strong>No more items, returns 14.</strong>
-<pre><code>[0, 2, 3, 4, 5].reduce( ( prev, curr ) =&gt; prev - curr ) 
-</code></pre>
-<strong>This one returns -14 !</strong>
-<h3>Reduce with functions !</h3>
+**No more items, returns 14.**
+
+```javascript runnable
+[0, 2, 3, 4, 5].reduce( ( prev, curr ) => prev - curr ) 
+```
+
+**This one returns -14 !**
+## reduce() with functions !
+
 The most interesting aspect of reduce is that it allows you to compose function. You can use the result of a function, use it in another function, then use that in another function …
 
 For example, let’s create 3 functions.
-<pre><code>const plus3 = x =&gt; x + 3
+```javascript
+const plus3 = x => x + 3
 
-const double = x =&gt; x * 2
+const double = x => x * 2
 
-const minus5 = x =&gt; x - 5
-</code></pre>
+const minus5 = x => x - 5
+```
 Let’s use reduce to compose a function including those three:
-<pre><code>[plus3, double, minus5].reduce( (value, nextFunction) =&gt; nextFunction(value), 0 )
-</code></pre>
+```javascript runnable
+const result = [plus3, double, minus5].reduce( (value, nextFunction) => nextFunction(value), 0 )
+
+console.log(result)
+```
+
 Can you guess what this is going to return ?
 
 We start at 0 and call plus3 =&gt; 0 + 3 = 3
