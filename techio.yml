@@ -1,8 +1,8 @@
 title: A look at the reduce function
 projects:
   reduce:
-    root: /
-    runner: node reduce.js
+    root: /project
+    runner: node
 plan:
 - title: Node.js Snippet
   statement: statement.md
