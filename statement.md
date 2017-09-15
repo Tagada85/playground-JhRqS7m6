@@ -59,7 +59,7 @@ console.log(minus)
 
 The most interesting aspect of reduce is that it allows you to compose function. You can use the result of a function, use it in another function, then use that in another function …
 
-For example, let’s create 3 functions. The function *plus3* takes a number and adds 3. *double* returns the number multiplied by 2 and *minus5* substracts 5 to the number. Then, we can use create an array of functions and call reduce on it.
+For example, let’s create 3 functions. The function *plus3* takes a number and adds 3. *double* returns the number multiplied by 2 and *minus5* substracts 5 to the number. Then, we can create an array of functions and call reduce on it.
 
 ```javascript runnable
 const plus3 = x => x + 3
@@ -75,27 +75,40 @@ console.log(result)
 
 Can you guess what this is going to return ?
 
-We start at 0 and call plus3 =&gt; 0 + 3 = 3
+We start at 0 and call plus3 => 0 + 3 = 3
 
-We then call double with that value =&gt; 3 * 2 = 6
+We then call double with that value => 3 * 2 = 6
 
-Finally we call minus5 =&gt; 6 - 5 = 1
+Finally we call minus5 => 6 - 5 = 1
 
 Pretty cool, right ?!
 
-Javascript also gives you a reduceRight function. It works like reduce but you start from the last item of the array. So this:
-<pre><code>[plus3, double, minus5].reduceRight( (value, nextFunction) =&gt; nextFunction(value), 0)
-</code></pre>
-will return …. -7
+Javascript also gives you a reduceRight function. It works like reduce but you start from the last item of the array. Like so:
+```javascript runnable
+const reduceRight = [plus3, double, minus5].reduceRight( (value, nextFunction) => nextFunction(value), 0)
 
-The order matters when you are doing such calculations. Of course, here we give 0 as the starting point ( which is the argument given to the first function called in our array ), but that is not mandatory
-<pre><code>[plus3, double, minus5].reduce( (value, nextFunction) =&gt; nextFunction(value), 5)
-</code></pre>
-This will return 11.
+console.log(reduceRight)
+```
+
+
+The order matters when you are doing such calculations. Of course, here we give 0 as the starting point ( which is the argument given to the first function called in our array ). But we don't have to start at 0:
+
+```javascript runnable
+const starting5 = [plus3, double, minus5].reduce( (value, nextFunction) => nextFunction(value), 5)
+
+console.log(starting5)
+```
+
+Composition is a key concept of functional programming. This is outside the scope of this article, but understanding how to use reduce can open a lot of possibilities in Javascript.
 
 By using a tool like reduce, you can create small functions and easily combine them to create more complicated and complete functions. Creating small functions makes them easier to test, easier to debug and assures you that they only do one thing.
 
-I hope this article gives you an idea of the power of the reduce function!
+## Creating map() from reduce()
 
-Feel free to share and comment.
-Have a nice day!
+The *map* function iterates through an array and returns a new array. Each element in the original array are passed to a function. For example:
+
+```javascript runnable
+const double = [1, 2, 3, 4].map( x => x *2 )
+
+console.log(double)
+```
