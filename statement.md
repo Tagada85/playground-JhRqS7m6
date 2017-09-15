@@ -33,15 +33,18 @@ const sum = [0,2,3,4,5].reduce( (prev, curr) => prev + curr)
 
 console.log(sum)
 ```
-First call =&gt; returns 0 , accumulator = 0
 
-Second call =&gt; returns 2, accumulator = 0 + 2 = 2
+Let's decompose this step by step to understand what it does under the covers.
 
-Third call =&gt; returns 3, accumulator = 2 + 3 = 5
+First call => returns 0 , accumulator = 0
 
-Fourth call =&gt; returns 4, accumulator = 5 + 4 = 9
+Second call => returns 2, accumulator = 0 + 2 = 2
 
-Fifth call =&gt; returns 5, accumulator = 9 + 5 = 14
+Third call => returns 3, accumulator = 2 + 3 = 5
+
+Fourth call => returns 4, accumulator = 5 + 4 = 9
+
+Fifth call =>; returns 5, accumulator = 9 + 5 = 14
 
 <strong>No more items, returns 14.</strong>
 <pre><code>[0, 2, 3, 4, 5].reduce( ( prev, curr ) =&gt; prev - curr ) 
