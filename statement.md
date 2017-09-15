@@ -131,4 +131,19 @@ console.log( doubleWithReduce )
 
 Can you see how interesting reduce makes things? How we can compose functions with it? Creating small and reusable pieces to create bigger functions?
 
-@[Luke, how many stars are there in these galaxies?]({"stubs": ["reduce.js"], "command": "node reduce.js"})
+@[Can you create a filter function with reduce only?]({"stubs": ["reduce.js"], "command": "node reduce.js"})
+
+Unfold to see my solution!
+:::
+```javascript runnable
+const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ]
+
+const filter = ( filterFunction, array ) => array.reduce( (newArray, item) => {
+  return filterFunction( item ) ? newArray.concat( item ) : newArray
+}, [] )
+
+const higherThan6 = price => price > 6 
+const pricesOver6 = filter( higherThan6, prices )
+console.log(pricesOver6)
+```
+:::
