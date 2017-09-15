@@ -2,8 +2,8 @@
 
 You may here a lot about functional programming lately. Functional programming relies on writing pure functions. So, what makes a function pure ?
 
- - No side effects, doesn’t change anything outside of it’s scope</li>
- - Gets its data from its arguments only<
+ - No side effects, doesn’t change anything outside of it’s scope
+ - Gets its data from its arguments only
  - Return a value or another function
 
 These things make a pure function a lot easier to test, because it will always return the same value given the same arguments. In Javascript, you can write pure functions, even if Javascript is not a purely functional programming. It just takes more discipline to stick with it.
@@ -49,7 +49,9 @@ Fifth call =>; returns 5, accumulator = 9 + 5 = 14
 **No more items, returns 14.**
 
 ```javascript runnable
-[0, 2, 3, 4, 5].reduce( ( prev, curr ) => prev - curr ) 
+const minus = [0, 2, 3, 4, 5].reduce( ( prev, curr ) => prev - curr ) 
+
+console.log(minus)
 ```
 
 **This one returns -14 !**
@@ -57,16 +59,15 @@ Fifth call =>; returns 5, accumulator = 9 + 5 = 14
 
 The most interesting aspect of reduce is that it allows you to compose function. You can use the result of a function, use it in another function, then use that in another function …
 
-For example, let’s create 3 functions.
-```javascript
+For example, let’s create 3 functions. The function *plus3* takes a number and adds 3. *double* returns the number multiplied by 2 and *minus5* substracts 5 to the number. Then, we can use create an array of functions and call reduce on it.
+
+```javascript runnable
 const plus3 = x => x + 3
 
 const double = x => x * 2
 
 const minus5 = x => x - 5
-```
-Let’s use reduce to compose a function including those three:
-```javascript runnable
+
 const result = [plus3, double, minus5].reduce( (value, nextFunction) => nextFunction(value), 0 )
 
 console.log(result)
