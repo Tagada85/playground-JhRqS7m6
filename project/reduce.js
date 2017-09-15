@@ -10,8 +10,6 @@
 
 const prices = [ 2.99, 5.99, 7.2, 15, 2000, 0.99 ]
 
-
-<details>
 /* This is my solution, uncomment to run
 
 const filter = ( filterFunction, array ) => array.reduce( (newArray, item) => {
@@ -24,4 +22,3 @@ const pricesOver6 = filter( higherThan6, prices )
 
 console.log(pricesOver6)
 */
-</details>
