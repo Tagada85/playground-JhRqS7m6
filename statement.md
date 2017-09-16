@@ -161,3 +161,7 @@ console.log(pricesOver6)
 ```
 
 :::
+
+## Conclusion
+
+Composition is a very sustainable way to write your code when possible. Favor the creation of small functions that can work together.
