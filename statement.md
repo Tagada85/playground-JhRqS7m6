@@ -6,7 +6,7 @@ You may here a lot about functional programming lately. Functional programming r
  - Gets its data from its arguments only
  - Return a value or another function
 
-These things make a pure function a lot easier to test, because it will always return the same value given the same arguments. In Javascript, you can write pure functions, even if Javascript is not a purely functional programming. It just takes more discipline to stick with it.
+These things make a pure function a lot easier to test, because it will always return the same value given the same arguments. In Javascript, you can write pure functions, even if Javascript is not a purely functional programming language. It just takes more discipline to stick with it.
 
 There are a few methods that you can learn in order to write pure functions. In this article, we will look a the *Array.prototype.reduce()* function.
 
@@ -132,7 +132,6 @@ console.log( doubleWithReduce )
 Can you see how interesting reduce makes things? How we can compose functions with it? Creating small and reusable pieces to create bigger functions?
 
 @[Can you create a filter function with reduce only?]({"stubs": ["reduce.js"], "command": "node reduce.js"})
-
 
 
 ::: Unfold to see my solution!
