@@ -1,8 +1,9 @@
-title: A look at the reduce function
-projects:
-  reduce:
-    root: /project
-    runner: node
+title: A look at the Array.reduce() function
 plan:
 - title: Node.js Snippet
   statement: statement.md
+projects:
+  reduce:
+    root: /project
+    runner:
+      name: node
