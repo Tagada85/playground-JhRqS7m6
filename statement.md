@@ -57,7 +57,7 @@ console.log(minus)
 **This one returns -14 !**
 ## reduce() with functions !
 
-The most interesting aspect of reduce is that it allows you to compose function. You can use the result of a function, use it in another function, then use that in another function …
+The most interesting aspect of reduce is that it allows you to compose functions. You can use the result of a function, use it in another function, then use that in another function …
 
 For example, let’s create 3 functions. The function *plus3* takes a number and adds 3. *double* returns the number multiplied by 2 and *minus5* substracts 5 to the number. Then, we can create an array of functions and call reduce on it.
 
