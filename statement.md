@@ -85,6 +85,12 @@ Pretty cool, right ?!
 
 Javascript also gives you a reduceRight function. It works like reduce but you start from the last item of the array. Like so:
 ```javascript runnable
+const plus3 = x => x + 3
+
+const double = x => x * 2
+
+const minus5 = x => x - 5
+
 const reduceRight = [plus3, double, minus5].reduceRight( (value, nextFunction) => nextFunction(value), 0)
 
 console.log(reduceRight)
@@ -94,6 +100,12 @@ console.log(reduceRight)
 The order matters when you are doing such calculations. Of course, here we give 0 as the starting point ( which is the argument given to the first function called in our array ). But we don't have to start at 0:
 
 ```javascript runnable
+const plus3 = x => x + 3
+
+const double = x => x * 2
+
+const minus5 = x => x - 5
+
 const starting5 = [plus3, double, minus5].reduce( (value, nextFunction) => nextFunction(value), 5)
 
 console.log(starting5)
