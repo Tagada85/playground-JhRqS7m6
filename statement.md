@@ -2,7 +2,7 @@
 
 You may here a lot about functional programming lately. Functional programming relies on writing pure functions. So, what makes a function pure ?
 
- - No side effects, doesn’t change anything outside of it’s scope
+ - No side effects, doesn’t change anything outside of its scope
  - Gets its data from its arguments only
  - Return a value or another function
 
