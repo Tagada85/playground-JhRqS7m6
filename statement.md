@@ -12,7 +12,7 @@ There are a few methods that you can learn in order to write pure functions. In 
 
 ## reduce()
 
-Reduce is a well named method. It takes an array and **reduces** it to a single value.
+Reduce is a well named method. It takes an array and **reduces** it to a single value.( or fold, or accumulate )
 
 It takes a function as its first parameter. This function can take 4 arguments. It can also take a optional second argument, which is the initial value to the first call of the function. Like so :
 
